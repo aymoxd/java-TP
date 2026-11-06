@@ -13,11 +13,20 @@ public class Main {
         etudiants.add(e1);
         etudiants.add(e2);
 
-        InfoS5 dev = new InfoS5("dev", etudiants);
+        InfoS5 info = new InfoS5("dev", etudiants);
 
        // dev.afficherFilier();
-       dev.afficherTotalEtudiants();
-       dev.ajouterEtudiant(e3);
+       info.afficherTotalEtudiants();
+       info.ajouterEtudiant(e3);
+
+       Etudiant resultat = info.chercherEtudiant(29);
+
+       if(resultat != null){
+        System.out.println("student found ");
+        System.out.println(resultat);
+       }else{
+        System.out.println("student not found!!!!");
+       }
 
 
 
