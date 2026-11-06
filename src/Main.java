@@ -1,22 +1,24 @@
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
        
-        Adress a = new Adress(324,"mohammed2","bostan","el jadida" , "morocco");
-        Etudiant aymane = new Etudiant("k112345678","aymane","elaroui",a);
-        Etudiant rachid = new Etudiant("78","rachid","elaroui",a);
-        Etudiant hanmid = new Etudiant("98","hanid","elaroui",a);
-        Etudiant hanmisd = new Etudiant("98","hanid","elaroui",a);
-        Etudiant handfmid = new Etudiant("98","hanid","elaroui",a);
+        Adress adr1 = new Adress(425, "nakhile", "NC times", "paris", "france");
+        Adress adr2 = new Adress(756, "klo", "sidi momen", "casablanca", "morocco");
+        Etudiant e1 = new Etudiant(1,"folane", "3ellane", adr1);
+        Etudiant e2 = new Etudiant(2,"parker", "peter", adr2);
+        Etudiant e3 = new Etudiant(3,"white", "walter", adr2);
 
+        ArrayList<Etudiant> etudiants = new ArrayList<>();
+        etudiants.add(e1);
+        etudiants.add(e2);
 
-         // System.out.println(aymane.getPrenom());
-        // aymane.getAdress().setVille("Rabat");
-       // System.out.println(aymane.getAdress());
+        InfoS5 dev = new InfoS5("dev", etudiants);
 
-      //  aymane.afficherCoordonnees();
+       // dev.afficherFilier();
+       dev.afficherTotalEtudiants();
+       dev.ajouterEtudiant(e3);
 
-        System.out.println(aymane.getCounter());
 
 
     }

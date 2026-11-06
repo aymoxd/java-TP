@@ -2,13 +2,13 @@ import java.util.Objects;
 
 public class Etudiant {
 
-    private String cne;
+    private int cne;
     private String nom;
     private String prenom;
     private Adress adress;
     private static int counter = 0;
 
-    public Etudiant(String cne, String nom, String prenom, Adress adress){
+    public Etudiant(int cne, String nom, String prenom, Adress adress){
            this.cne = cne;
            this.nom = nom;
            this.prenom = prenom;
@@ -23,7 +23,7 @@ public class Etudiant {
            counter++;
     }
 
-    public String getCne(){
+    public int getCne(){
         return cne;
     }
     public String getNom() {
@@ -36,7 +36,7 @@ public class Etudiant {
         return prenom;
     }
 
-    public void setCne(String cne){
+    public void setCne(int cne){
         this.cne = cne;
     }
     public void setNom(String nom) {
@@ -79,6 +79,6 @@ public class Etudiant {
         return Objects.equals(this.cne, autre.cne);
     }
 
-    
+
 
 }
